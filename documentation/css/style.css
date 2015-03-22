@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/*============================== 
+	- Template Name: LUV - Responsive One Page HTML Wedding Template
+	- Author: DoubleEight
+	- Version: 1.0
+	- Website: www.dethemes.com
+================================= */	
+
+/*---------------------- 
+	Stylesheet Guide
+------------------------
+01. GENERAL
+02. NAVIGATION
+03. CONTENT	*/
+
+
+/* =================================================== */
+/* 01. GENERAL  	 		                           */
+/* =================================================== */
+
+body {
+	font-family: 'PT Sans', sans-serif;	
+	color:#747474;
+	margin:0; padding:0
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+	color:#444444;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+	color:#444444;
+}
+
+
+h2{
+	font-size:30px;
+}
+
+h3{
+	font-size:26px;
+	font-weight:400;
+}
+
+h4{
+	font-size:16px;
+	font-weight:400;
+}
+
+p{
+	font-size:16px;
+	line-height:24px;
+}
+
+a{
+	color:#333;
+}
+
+a:hover{
+	color:#444444;
+}
+
+
+a:focus{
+	outline:0;
+}
+
+/* =================================================== */
+/* 02. NAVIGATION	 		                           */
+/* =================================================== */
+
+nav.navigation {
+    float: left;
+	width: 250px; 
+    overflow: hidden;
+    position: fixed; 
+    top: 0px;
+    background: #292929;
+    height: 100%;
+    padding-top: 40px;
+}
+
+nav ul{
+	height:94%;
+	overflow:auto;
+}
+
+nav ul li a {
+  font-size: 15px;
+  line-height: 15px;
+  font-family: 'PT Sans', sans-serif;	
+  color: #9D9D9D;
+}
+nav.navigation ul li {
+    list-style: none; 
+    float: left;
+    clear: both;
+    padding-left: 30%;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+nav.navigation ul {
+    padding: 0px; 
+	margin: 0px;
+}
+
+nav.navigation ul li a {
+    text-decoration: none; 
+	float: left;  
+}
+
+nav.navigation ul li a:hover {
+    color: #fff;
+}
+
+/*========================*/
+/* 03. CONTENT      	  */
+/*========================*/
+section.content {
+    clear: none; 
+    padding: 0px 0px 100px 50px; margin: 0px; 
+    border-left: 1px solid #DDDDDD;
+    position: relative;
+    margin-left: 250px;
+    width: 800px;
+
+}
+
+section.content > h2 {
+    margin-top: 0px;
+}
+
+section.content > div{
+    margin-top: 50px;
+}

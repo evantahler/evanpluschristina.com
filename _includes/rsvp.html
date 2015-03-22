@@ -1,0 +1,97 @@
+ <!--RSVP-->
+ <!--===================================================================================-->
+ <section id="rsvp">
+  
+  <!--RSVP INTRO-->
+  <div class="fullheight window">
+    <div class="container-fluid h100">
+      
+      <!--PARALLAX PHOTO-->
+      <div class="row h60">
+        <div id="rsvp-main-photo" class="h100">
+        </div>
+      </div> <!--END of PARALLAX PHOTO-->
+      
+      <!--START TITLE AND TEXT-->
+      <!--START BOOTSTRAP GRID-->
+      <div class="row h40">
+        <div id="rsvp-intro" class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center no-padding h100">
+          
+          <!--CENTER-MIDDLE ALIGN BLOCK-->
+          <div class="block-centered">
+            <div class="centered-item">
+              
+              <!--TITLE AND TEXT-->
+              <h2 class="animation fadeInUp">RSVP</h2>
+              <p class="animation delay1 fadeInUp">We cannot wait to see you at our wedding! We prommise singing, dancing, drinking, food, and freinds... all in in a majestic Redwood forest!</p>
+
+              <p>We are registerd at <a target="_blank" href="https://thankfulregistry.com/evanpluschristina"><strong>www.thankfulregistry.com/evanpluschristina</strong></a></p>
+
+              <a href="#rsvp-form" class="smoothscroll animation delay2 fadeInUp"><div class="de-icon inlineblock medium-size "><i class="de-icon-down-open-big"></i></div></a>
+              
+            </div>
+          </div><!--END of CENTER-MIDDLE ALIGN BLOCK-->
+          
+        </div>
+      </div>
+      <!--END of BOOTSTRAP GRID-->
+      <!--END of TITLE AND TEXT-->
+      
+    </div>
+  </div><!--END of RSVP INTRO-->         
+  
+  
+  <!--RSVP FORM-->
+  <div id="rsvp-form" class="fullheight window">
+    <div class="container-fluid h100">
+      
+      <!--START BOOTSTRAP GRID-->
+      <div class="row h100">
+        <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center h100">
+          
+          <!--CENTER-MIDDLE ALIGN BLOCK-->
+          <div class="block-centered">
+            <div class="centered-item">
+              
+              <!--TITLE-->
+              <h3>Join Us</h3>
+              <p>You can command-click (option-click on windows) to select all of the events you will be attending.</p>
+              
+              <!--FORM-WRAPPER-->
+              <div id="form-wrapper">
+                
+                <!--RESULT MESSAGE-->
+                <div id="result" class="result"> <!-- Show Message --> </div>
+                
+                <!--FORM-->
+                <form method="post" action="rsvp.php" id="rsvpform">
+                  <div id="fullname" class="form-group">
+                    <input type="text" class="form-control" id="inputname" placeholder="*Name">
+                  </div>
+                  <div id="email" class="form-group">
+                    <input type="email" class="form-control" id="inputemail" placeholder="*Email">
+                  </div>
+                  <div id="events-option" class="form-group">
+                    <select  multiple id="inputevents" class="form-control">
+                      <option>Wedding Day</option>
+                      <option>Ceremony Day</option>
+                      <option>The Party</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" id="submitButton"  name="submitButton" class="btn btn-default" value="I'm Attending">
+                  </div> 
+                </form> <!--END of FORM-->
+                
+              </div> <!--END of FORM WRAPPER-->
+              
+            </div>
+          </div> <!--END of CENTER-MIDDLE ALIGN BLOCK-->
+          
+        </div>
+      </div> <!--END of BOOTSTRAP GRID-->
+      
+    </div>
+  </div> <!--END of RSVP FORM-->
+  
+</section> <!--END of RSVP-->

@@ -1,20 +1,47 @@
-<HTML>
+---
+title: Christina and Evan get hitched!
+---
+
+<!DOCTYPE html>
+<HTML lang="en">
+
   <HEAD>
-    <TITLE>Evan + Christina</TITLE>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='style.css' rel='stylesheet' type='text/css'>
-    
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.backstretch.min.js"></script>
-    
-    <script type="text/javascript">
-      $( document ).ready(function() {
-        $.backstretch("robots.png", {centeredY: false, duration: 2000, fade: 3000});
-      });
-    </script>
-    
+    {% include head.html %}
   </HEAD>
-  <BODY>
-    <h1>Stay Tuned...</h1> 
-  </BODY>
+
+  <BODY class="fullsize">
+
+    <div id="white-screen"></div>
+
+    <div id="preloader-overlay" class="background_image">
+      <div class="block-centered">
+        <div class="centered-item">
+          <div id="logo_loader">E+C</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="location">
+      <div id="location-overlay"></div>
+      <div id="location-map-wrapper">
+        <div id="location_map"></div>
+      </div>
+    </div>
+
+    <!--CONTENT-->    
+    <div id="content-wrapper">
+      <div id="content">
+        {% include splash.html %}
+        {% include nav.html %}
+        {% include where_when.html %}
+        {% include couple.html %}
+        {% include gallery.html %}
+        {% include events.html %}
+        {% include accomodations.html %}
+        {% include rsvp.html %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </BODY> 
 </HTML>
