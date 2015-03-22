@@ -1,0 +1,40 @@
+<!--GALLERY ITEM-->
+<!--===========================================-->
+<div class="masonry_col w33 {% if include.last_col == true %}last-col{% endif %} animation fadeIn">
+
+  <!--PHOTO-ITEM-->
+  <div class="photo-item h100" >
+    <div class="photo-item-preview h100">
+
+      <!-- PHOTO -->
+      <div class="masonry-image autocrop-image h100" style="background-image:url({{ include.image_url }});">
+      </div>
+
+      <!-- PHOTO OVERLAY -->
+      <div class="photo-item-overlay">
+
+        <!--CENTER-MIDDLE ALIGN BLOCK-->
+        <div class="block-centered">
+          <div class="centered-item">
+
+            <!--ICON-->
+            <a class="magnific-zoom-gallery" href="{{ include.image_url }}" title="{{ include.image_title }}">
+              <div class="de-icon circle small-size inlineblock">
+                <i class="de-icon-picture-3"></i>
+              </div>
+            </a>
+
+          </div>
+        </div><!--CENTER-MIDDLE ALIGN BLOCK-->
+
+        <!--PHOTO CAPTION-->
+        <div class="photo-caption-wrapper">
+          <span class="photo-caption delay1 fadeInUp">{{ include.image_title }}</span>
+        </div>
+
+      </div><!--END of PHOTO OVERLAY-->
+
+    </div>
+  </div><!--END of PHOTO-ITEM-->
+</div><!--END of GALLERY ITEM-->
+

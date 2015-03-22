@@ -1,0 +1,8 @@
+markdown: redcarpet
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - theme
+  - example
+  - documentation

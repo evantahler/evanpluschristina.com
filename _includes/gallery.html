@@ -1,0 +1,81 @@
+<!--GALLERY SECTION-->
+<!--===================================================================================-->                    
+<section id="gallery">
+  
+  <!--GALLERY-INTRO-->
+  <div class="fullheight window">
+    <div class="container-fluid h100">
+      
+      <!--PARALLAX PHOTO-->
+      <div class="row h60">
+        <div id="gallery-main-photo" class="h100">
+        </div>
+      </div> <!--END of PARALLAX PHOTO-->
+      
+      <!--START TITLE AND TEXT-->
+      <!--START BOOTSTRAP GRID-->
+      <div class="row h40">
+        <div id="gallery-intro" class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center no-padding h200">
+          
+          <!--CENTER-MIDDLE ALIGN BLOCK-->
+          <div class="block-centered">
+            <div class="centered-item">
+              
+              <!--TITLE AND TEXT-->
+              <h2 class="animation fadeInUp">Our Story...</h2>
+                
+              <p class="animation delay1 fadeInUp" align="left">The first thing that Evan ever said to Christina was "so I hear we're going to get married". In response to which, Christina immediately thought "what a presumptuous ass".</p>
+
+              <p class="animation delay2 fadeInUp" align="left">In the age of OkCupid, Tinder, Catkaller, Snugglebugs, and eHarmony... Christina and Evan were given a 99% matching by an even more sophisticated algorithm... the minds of their friends Ben Ross and Melanie Duve. Upon first meeting, Christina remained skeptical (see above paragraph) and Evan was smitten (see above paragraph). It didn't take too long, however, for Christina to realize what had been obvious to everyone else, that she and Evan were perfect together.</p>
+
+              <p class="animation delay3 fadeInUp" align="left">10 months later, Evan made good on those first words to Christina...all it took was a board game, a fireplace, and a ring.</p>
+
+              <a href="#gallery-photo" class="smoothscroll animation delay4 fadeInUp slowScroll"><div class="de-icon inlineblock medium-size "><i class="de-icon-down-open-big"></i></div></a>
+              
+            </div>
+          </div><!--END of CENTER-MIDDLE ALIGN BLOCK-->
+          
+        </div>
+      </div> 
+      <!--END of BOOTSTRAP GRID-->
+      <!--END of TITLE AND TEXT-->
+      
+    </div> <!--END of CONTAINER-FLUID-->
+  </div><!--END of GALLERY INTRO-->
+  
+  
+  <!--GALLERY-PHOTO-->
+  <div id="gallery-photo" class="fullheight window">
+    <div class="container-fluid h100">
+      
+      <!--START BOOTSTRAP GRID-->
+      <div class="row h100">
+        <div class="col-md-12 no-padding h100">
+          
+          <!--MASONRY GALLERY-->
+          <div id="gallery-masonry" class="masonry three-row h100">
+            
+            <!--MASONRY GRID SIZER-->
+            <div class="grid_sizer three-col"></div>      
+            
+{% include components/gallery_image.html image_url="images/gallery/1.jpg" image_title="The treehouse in Petaluma we spent Evan's 30th Birthday in... during an earthquake." %}
+{% include components/gallery_image.html image_url="images/gallery/2.jpg" image_title="The first time Evan was introduced to Christina's Family." %}
+{% include components/gallery_image.html image_url="images/gallery/3.jpg" image_title="Our Food-Truck themed Valentines Day & Engagment & Goodbye Party." last_col=true %}
+
+{% include components/gallery_image.html image_url="images/gallery/4.jpg" image_title="Buying wine for Evan's Mom's birthday (and having some ourselves)." %}
+{% include components/gallery_image.html image_url="images/gallery/5.jpg" image_title="The Mediterranean from the Barcelona Beach." %}
+{% include components/gallery_image.html image_url="images/gallery/6.jpg" image_title="London, our home for a few months." last_col=true %}
+
+{% include components/gallery_image.html image_url="images/gallery/7.jpg" image_title="The Engagnment Ring (and the Carcassonne piece that came with it)." %}
+{% include components/gallery_image.html image_url="images/gallery/8.jpg" image_title="Evan in front of Sagrada Familia." %}
+{% include components/gallery_image.html image_url="images/gallery/9.jpg" image_title="Christina in Muir Woods." last_col=true %}
+
+          </div><!--END of MASONRY GALLERY-->
+          
+        </div> 
+      </div> <!--END of BOOTSTRAP GRID-->
+      
+    </div> <!--END of CONTAINER-FLUID-->
+  </div><!--END of GALLERY-PHOTO-->
+  
+</section><!--END of GALLERY-->
