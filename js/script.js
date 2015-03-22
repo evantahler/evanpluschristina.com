@@ -1,19 +1,6 @@
   
   'use strict';
   
-  // Check IE Function
-  //==================================================================================
-  var isIE = function isIE() {
-    if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident\/7\./)) {
-        return 1;
-    }
-  }
-  
-  // Check Safari Function
-  //===================================================================================
-   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Mac') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        $('body').addClass('safari-mac');
-    }
     
   $(document).ready(function(){       
     // PACE
@@ -88,10 +75,11 @@
           $('#blog-main-photo').parallax("50%", 0.1);
           $('#events-main-photo').parallax("50%", 0.1);
           $('#rsvp-main-photo').parallax("50%", 0.1);
+          $('#accommodations-main-photo').parallax("50%", 0.1);
         }
         else if($(window).width()>1199 && device.tablet())
         {
-          $('#gallery-main-photo, #bridesmaid-main-photo, #groomsmen-main-photo, #blog-main-photo, #events-main-photo, #rsvp-main-photo').css("background-attachment","scroll");
+          $('#gallery-main-photo, #accommodations-main-photo, #bridesmaid-main-photo, #groomsmen-main-photo, #blog-main-photo, #events-main-photo, #rsvp-main-photo').css("background-attachment","scroll");
         }
       }
     
@@ -222,7 +210,18 @@
       $("header, #content-wrapper, #main-menu").removeClass("moveto-right");
     });
     
-    
+
+    // smooth scrolling on navigation
+    $(".nav li a[href^='#'], .slowScroll").on('click', function(e) {
+       e.preventDefault();
+       var hash = this.hash;
+       $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 1000, function(){
+           window.location.hash = hash;
+       });
+    });
+      
     
     // SLIDER
     //==================================================================================        
@@ -233,7 +232,7 @@
           { image : 'images/splash/robots-splash.jpg' },
           { image : 'images/splash/humans-splash.jpg' },
         ],
-        slide_interval: 3000,
+        slide_interval: 4000,
         stop_loop: true,
         horizontal_center : 0,
         vertical_center : 0,
@@ -248,57 +247,6 @@
     theday = new Date(2015, 9, 25);
     $('#countdown').countdown({until: theday, format: 'WDHMS'});
 
-    
-    
-    
-    // MAGNIFIC POPUP
-    //==================================================================================
-    $('.magnific-zoom').magnificPopup({
-      type: 'image',
-      image: {
-          // options for image content type
-          titleSrc: 'title'
-      },
-      fixedContentPos:true,
-      callbacks: {
-          open: function() {
-              // Will fire when this exact popup is opened
-          },
-          afterClose: function() {
-              // Will fire when popup is closed
-          if ( !device.tablet() && !device.mobile() && isIE() != 1 && !$("body").hasClass("safari-mac") ) {
-              $("html").css('overflow','hidden'); 
-          }
-          }
-        },
-    });
-    
-    
-    
-    // AJAX POPUP
-    //==================================================================================
-    $('.ajax-popup').magnificPopup({
-      type: 'ajax',
-    ajax: {
-      settings: {cache:false} 
-      // Ajax settings object that will extend default one - http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
-      // For example:
-      // settings: {cache:false, async:false}
-    },
-    fixedContentPos:true,
-    callbacks: {
-        open: function() {
-            // Will fire when this exact popup is opened
-        },
-        afterClose: function() {
-            // Will fire when popup is closed
-        if ( !device.tablet() && !device.mobile() && isIE() != 1 && !$("body").hasClass("safari-mac") ) {
-            $("html").css('overflow','hidden'); 
-        }
-        }
-      },
-    });   
-        
     
     
     // GALLERY - MAGNIFIC POPUP
@@ -320,7 +268,7 @@
           },
           afterClose: function() {
               // Will fire when popup is closed
-          if ( !device.tablet() && !device.mobile() && isIE() != 1 && !$("body").hasClass("safari-mac") ) {
+          if ( !device.tablet() && !device.mobile() && !$("body").hasClass("safari-mac") ) {
               $("html").css('overflow','hidden'); 
           }
           }
@@ -347,148 +295,6 @@
         }
       }
     );  
-    
-    
-    
-          
-    // TOOLTIPS
-    //==================================================================================
-    var menu_tooltips = function(){
-      $('.use-tooltips').tooltip('destroy');
-      if ($(window).width()>1199 && !device.tablet() && !device.mobile()) {
-        $(".use-tooltips").tooltip({
-          placement: "right",
-        });
-        }
-    }
-    
-    //Execute on load
-    menu_tooltips();
-    
-    //Execute on window resize
-    $(window).resize(function() { 
-      menu_tooltips();
-    });   
-    
-    
-    // PLACEHOLDER
-    //==================================================================================
-    $('input, textarea').placeholder();
-    
-  });
+        
+});
   
-  
-  // EVENTS - RSVP BUTTON
-  //==================================================================================
-  $(document).on('click', '.popup-button-scroll', function(e) {
-    e.preventDefault();
-    var hashlink = $(this).attr("href");
-    $.magnificPopup.close();
-    if ( $(window).width()>1199) {
-      $.smoothScroll({
-          scrollElement: $('html, body'),
-            scrollTarget: hashlink,
-        speed:1000
-        });
-    }
-    else
-    {
-      $.smoothScroll({
-          scrollElement: $('html, body'),
-            scrollTarget: hashlink,
-        speed:1000,
-        offset: -($('.sidebar-menuicon').height())
-        });
-    }
-    
-    //Change hash link
-    //window.location.href = $(this).attr("href");
-    });
-  
-  
-  
-  
-  
-  
-  $(window).load(function () {  
-    // OPEN LOCATION MAP
-    //==================================================================================
-    $(".popup-map, #map-menu").click(function(e){
-      e.preventDefault();
-      $("#location").show(0,function(){
-        $("#location_map").gMap({
-                maptype: google.maps.MapTypeId.ROADMAP, 
-                zoom: 9, 
-                markers: 
-            [
-              {
-                        latitude: 37.746957, 
-                        longitude: -122.419424, 
-                        html: "<strong>Friday Night: The Pre-Party</strong><br/>  Virgi'ls Sea Room<br/>  3152 Mission St<br/>  San Francisco, CA 94110<br/>  <a target=\"_blank\" href=\"http://virgilssf.com\">virgilssf.com</a>", 
-                        popup: true,               
-              },
-              {
-                        latitude: 37.464395, 
-                        longitude: -122.428891, 
-                        html: "<strong>Saturday Night: Family Rehearsal Dinner</strong><br/> It's Italia<br>  Half Moon Bay Inn  <br/>401 Main St  <br />Half Moon Bay, CA 94019  <br /><a target=\"_blank\" href=\"http://www.itsitaliarestaurant.com/\">www.itsitaliarestaurant.com</a>", 
-                        popup: true,               
-              },
-              {
-                        latitude: 37.4656, 
-                        longitude: -122.428667, 
-                        html: "<strong>Saturday Night: Low-Key Drinks</strong><br/> Pasta Moon<br>  Half Moon Bay Inn  <br/>315 Main St  <br />Half Moon Bay, CA 94019  <br /><a target=\"_blank\" href=\"http://www.itsitaliarestaurant.com/\">www.itsitaliarestaurant.com</a>", 
-                        popup: true,               
-              },
-              {
-                        latitude: 37.276382, 
-                        longitude: -122.296578, 
-                        html: "<strong>Sunday: The Ceremony & Party</strong><br/>  Memorial County Park<br/>  9500 Pescadero Creek Rd<br/>  San Francisco, CA 94021<br/>  <a target=\"_blank\" href=\"http://parks.smcgov.org/memorial-park\">parks.smcgov.org/memorial-park</a>", 
-                        popup: true,               
-              },
-             ], 
-                panControl: true, 
-                zoomControl: true, 
-                mapTypeControl: true, 
-                scaleControl: true, 
-                streetViewControl: true, 
-                scrollwheel: false, 
-                styles: [ { "stylers": [ { "hue": "#bb5844" }, { "gamma": 1 }, { "saturation": -60 } ] } ], 
-                onComplete: function() {
-                    // Resize and re-center the map on window resize event
-                    var gmap = $("#location_map").data('gmap').gmap;
-                    window.onresize = function(){
-                        google.maps.event.trigger(gmap, 'resize');
-                        $("#location_map").gMap('fixAfterResize');
-                    };
-                }
-            });
-      });
-      
-      
-      $(document).bind("touchmove",function(event){
-        event.preventDefault();
-        });
-      
-      
-      $("html").css("overflow","hidden");
-      
-      $("body").addClass("is-popup");
-      
-    });
-    
-    
-    // CLOSE LOCATION MAP
-    //==================================================================================
-    $("#location-overlay").click(function(){
-       $("body").removeClass("is-popup");
-       $(document).unbind("touchmove");
-       $("html").css("overflow","auto");
-       
-       if (isIE() == 1)
-       {
-         $('#groomsmen-masonry, #bridesmaid-masonry, #gallery-masonry').masonry()
-       }       
-       
-      $("#location").hide();
-    }); 
-  });

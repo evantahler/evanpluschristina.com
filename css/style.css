@@ -1945,3 +1945,30 @@ a:hover .de-icon.effect3{
 	height:250px
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#accommodations-main-photo{
+	background:url(../images/patio.jpg);
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	background-repeat:no-repeat;
+	height:420px;
+	/*Fullsize layout will replace this height   */
+	/*with h10-h100 class   */
+}
+
+.safari-mac #accommodations-main-photo{
+	background-attachment: scroll;
+}
