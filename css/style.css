@@ -567,7 +567,7 @@ p a:hover{
 }
 
 #gallery-main-photo{
-	background:url(../images/gallery-slice.jpg);
+	background:url(/images/gallery-slice.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:top center;
@@ -593,7 +593,7 @@ p a:hover{
 }
 
 #events-main-photo{
-	background:url(../images/beer-slice.jpg);
+	background:url(/images/beer-slice.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:center center;
@@ -746,7 +746,7 @@ p a:hover{
 }
 
 #rsvp-main-photo{
-	background:url(../images/meep-slice.jpg);
+	background:url(/images/meep-slice.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:top center;
@@ -761,7 +761,7 @@ p a:hover{
 }
 
 #accommodations-main-photo{
-	background:url(../images/patio.jpg);
+	background:url(/images/patio.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:top center;
@@ -776,7 +776,7 @@ p a:hover{
 }
 
 #faq-main-photo{
-	background:url(../images/hands.jpg);
+	background:url(/images/hands.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:top center;

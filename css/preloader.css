@@ -17,7 +17,7 @@
 }
 
 .background_image{
-	background-image:url(../images/splash/robots-splash.jpg); 
+	background-image:url(/images/splash/robots-splash.jpg); 
 	background-position:center center; 
 	background-size:cover; 
 }

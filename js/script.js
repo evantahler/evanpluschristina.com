@@ -226,12 +226,22 @@
     // SLIDER
     //==================================================================================        
     jQuery(function($){
+
+      var slides = [];
+      if(window.location.pathname === '/elope/'){
+        slides = [ 
+          { image : '/images/elope/CE0185.jpg' },
+          { image : '/images/elope/CE0223.jpg' },
+        ];
+      }else{
+        slides = [ 
+          { image : '/images/splash/robots-splash.jpg' },
+          { image : '/images/splash/humans-splash.jpg' },
+        ];
+      }
+
       $.supersized({
-        slides  :   
-        [ 
-          { image : 'images/splash/robots-splash.jpg' },
-          { image : 'images/splash/humans-splash.jpg' },
-        ],
+        slides : slides,
         slide_interval: 4000,
         stop_loop: true,
         horizontal_center : 0,
