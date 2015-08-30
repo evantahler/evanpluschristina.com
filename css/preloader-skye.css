@@ -32,5 +32,15 @@
 	z-index:1998;
 }
 
+.simple-padded{
+	padding: 40px;
+}
+
+.banner-image{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
 /* #logo-loader is pace loader theme. /*
 /* It can be found in css/pace/pace-theme-center-circle.css */
