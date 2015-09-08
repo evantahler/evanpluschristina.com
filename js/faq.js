@@ -5,4 +5,5 @@ $( document ).ready(function() {
   $('#faq_answer_4').hide();
   $('#faq_answer_5').hide();
   $('#faq_answer_6').hide();
+  $('#faq_answer_7').hide();
 });
